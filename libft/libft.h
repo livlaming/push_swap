@@ -6,7 +6,7 @@
 /*   By: livlamin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/21 13:02:23 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/03/08 14:35:47 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/01 15:06:48 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 typedef struct s_list
 {
 	struct s_list	*next;
-	char			*content;
+	void			*content;
 }					t_list;
 
 void				*ft_memset(void *b, int c, size_t len);
