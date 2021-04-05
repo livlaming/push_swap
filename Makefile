@@ -6,22 +6,29 @@
 #    By: livlamin <livlamin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/04/01 09:51:07 by livlamin      #+#    #+#                  #
-#    Updated: 2021/04/01 15:10:17 by livlamin      ########   odam.nl          #
+#    Updated: 2021/04/05 22:03:59 by livlamin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CHECKER = checker
+COMMON = common
 LIBFT = libft/libft.a
-SRC_CHECK = checker.c 
-SRC_SWAP = push_swap.c
-HEADER_FILES = push_swap.h
+SRC_CHECK = checker.c \
+			get_next_line.c \
+			get_next_line_utils.c
+SRC_SWAP = push_swap.c \
+			get_next_line.c \
+			get_next_line_utils.c
+HEADER_FILES = push_swap.h \
+				get_next_line.h
+				# libft.h
 OBJ_CHECK = $(addprefix objs/, $(SRC_CHECK:.c=.o))
 OBJ_SWAP = $(addprefix objs/, $(SRC_SWAP:.c=.o))
 CFLAGS = -Wall -Werror -Wextra
 all: $(NAME) $(CHECKER)
-	
-$(NAME):$(OBJ_SWAP) $(HEADER_FILES)
+
+$(NAME):$(OBJ_SWAP) $(HEADER_FILES) $(LIBFT) 
 	$(CC) $(CFLAGS) -I. -Llibft $(OBJ_SWAP) -o push_swap
 
 $(CHECKER): $(OBJ_CHECK) $(HEADER_FILES) $(LIBFT)
@@ -33,22 +40,23 @@ objs/%.o: %.c
 
 $(LIBFT): 
 	$(MAKE) -C libft
+	# mv libft/$(LIBFT) objs
 
-$(GNL):
-	$(MAKE) -C get_next_line
+# $(GNL):
+# 	$(MAKE) -C get_next_line
 
 clean :
 	@$(RM) $(OBJ_CHECK)
 	@$(RM) $(OBJ_SWAP)
 	@$(RM) -rf objs
 	$(MAKE) -C libft clean 
-	$(MAKE) -C get_next_line clean
+	# $(MAKE) -C get_next_line clean
 
 fclean: clean
 	@$(RM) $(NAME)
 	@$(RM) $(CHECKER)
 	$(MAKE) -C libft fclean
-	$(MAKE) -C get_next_line fclean
+	# $(MAKE) -C get_next_line fclean
 
 re:	fclean all
 

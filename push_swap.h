@@ -6,15 +6,16 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:08:14 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/01 15:03:40 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/05 21:21:04 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "libft/libft.h"
-#include <stdio.h> //
+# include "libft/libft.h"
+# include "get_next_line.h"
+# include <stdio.h> //
 
 typedef struct      s_lst
 {
