@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:32:40 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/07 14:20:39 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/07 16:51:11 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@
 
 int main(int argc, char **argv)
 {
-    t_swap_lst *lst;
-    t_swap_lst *head;
+    t_ps_lst *lst;
+    t_ps_lst *head;
     int     number;
     int     result;
     char    *line;
@@ -73,16 +73,25 @@ int main(int argc, char **argv)
     int i = 0;
     while (lst)
     {
-        printf("next: %d\n", lst->content);
+        printf("con: %d\n", lst->content);
+        printf("prev: %p\n", lst->prev);
+        printf("list: %p\n", lst);
+        printf("next: %p\n", lst->next);
+        printf("\n");
         head = lst;
         lst = lst->next;
         i++;
     }
     lst = head;
+    printf("\n\n");
     // printf("next: %d\n", lst->content);
     while (lst)
     {
-        printf("prev: %d\n", lst->content);
+        printf("con: %d\n", lst->content);
+        printf("prev: %p\n", lst->prev);
+        printf("list: %p\n", lst);
+        printf("next: %p\n", lst->next);
+        printf("\n");
         lst = lst->prev; 
     }
     return (0);

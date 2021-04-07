@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:08:14 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/07 14:07:22 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/07 16:24:18 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@
 # include "get_next_line.h"
 # include <stdio.h> //
 
-typedef struct      s_swap_lst
+typedef struct      s_ps_lst
 {
     int     			content;
-	struct s_swap_lst	*next;
-    struct s_swap_lst	*prev;
-}					t_swap_lst;
+	struct s_ps_lst	    *next;
+    struct s_ps_lst	    *prev;
+}					t_ps_lst;
 
 /*
 ** push swap linked list
 */
-t_swap_lst      *swap_create_elem(int number, t_swap_lst *prev);
-void            swap_list_push_back(t_swap_lst **begin_list, int number);
+t_ps_lst      *swap_create_elem(int number, t_ps_lst *prev);
+void          swap_list_push_back(t_ps_lst **begin_list, int number);
 // int     checker(int argc, char **argv);
 // int     push_swap(int argc, char **argv);
 
