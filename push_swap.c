@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/07 17:32:07 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/07 17:34:34 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 
 int	main(int argc, char **argv)
 {
-	(void)argc;
-	(void)argv;
-	printf("ja");
+	t_ps_lst	*lst_a;
+	t_ps_lst	*lst_b;
+
+	lst_a = 0;
+	lst_b = 0;
+	if (argc == 1)
+		return (0);
+	(argv)++;
+	lst_a = divide_input(lst_a, argc, argv, 0);
+	print_list(lst_a); //
 	return (0);
 }
