@@ -1,21 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   push_swap.c                                        :+:    :+:            */
+/*   divide_input.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/07 17:32:07 by livlamin      ########   odam.nl         */
+/*   Created: 2021/04/07 17:30:20 by livlamin      #+#    #+#                 */
+/*   Updated: 2021/04/07 17:30:32 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+t_ps_lst	*divide_input(t_ps_lst *lst_a, int argc, char **argv, int number)
 {
-	(void)argc;
-	(void)argv;
-	printf("ja");
-	return (0);
+	char	**split;
+
+	split = NULL;
+	if (argc != 2)
+	{
+		while (argc > 1)
+		{
+			number = ft_atoi(*argv);
+			swap_list_push_back(&lst_a, number);
+			argv++;
+			argc--;
+		}
+	}
+	else
+	{
+		split = ft_split(*argv, ' ');
+		while (*split)
+		{
+			number = ft_atoi(*split);
+			swap_list_push_back(&lst_a, number);
+			split++;
+		}
+	}
+	return (lst_a);
 }

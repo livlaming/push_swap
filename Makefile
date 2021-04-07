@@ -6,7 +6,7 @@
 #    By: livlamin <livlamin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/04/01 09:51:07 by livlamin      #+#    #+#                  #
-#    Updated: 2021/04/07 13:39:28 by livlamin      ########   odam.nl          #
+#    Updated: 2021/04/07 17:30:56 by livlamin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ COMMON = common
 LIBFT = libft/libft.a
 SRC_BOTH = get_next_line.c \
 			get_next_line_utils.c \
-			linked_list_push_swap.c
+			linked_list_push_swap.c \
+			divide_input.c \
+			HULPFUNCTIE.c
 SRC_CHECK = checker.c	
 SRC_SWAP = push_swap.c 
 HEADER_FILES = push_swap.h \
