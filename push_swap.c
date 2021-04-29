@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/29 12:41:08 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/29 13:40:11 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,32 @@ int	main(int argc, char **argv)
 	(argv)++;
 	lst_a = create_lst_a(lst_a, argc, argv, 0);
 	lst_b = create_lst_b(lst_b, argc);
-	printf("lst a\n"); //
-	print_list(lst_a); //
-	printf("lst b\n"); //
-	print_list(lst_b); //
 
-	// lst_a = sa(lst_a);
-	lst_a = clear_lst(lst_a);
-	lst_b = clear_lst(lst_b);
-	print_list(lst_a); //
+	prep_print_list(lst_a, NULL);
+	// if (lst_a) //
+	// {
+	// 	printf("lst a\n"); //
+	// 	print_list(lst_a); //
+	// }
+	// if (lst_b) //
+	// {
+	// 	printf("lst b\n"); //
+	// 	print_list(lst_b); //
+	// }
+
+	lst_a = sa(lst_a);
+	printf("after sa\n");
+	prep_print_list(lst_a, NULL);
+	// if (lst_a) //
+	// {
+	// 	printf("lst a\n"); //
+	// 	print_list(lst_a); //
+	// }
+	if (lst_a)
+		lst_a = clear_lst(lst_a);
+	if (lst_b)
+		lst_b = clear_lst(lst_b);
+	// print_list(lst_a); //
 	// system("leaks push_swap");
 	return (0);
 }

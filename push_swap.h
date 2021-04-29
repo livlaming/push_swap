@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:08:14 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/29 13:20:24 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/29 13:29:58 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ typedef struct      s_ps_lst
 /* WEG!!!
 **
 */
-void            print_list(t_ps_lst *lst); 
+void            print_list(t_ps_lst *lst); //
+void            prep_print_list(t_ps_lst *lst_a, t_ps_lst *lst_b); //
 
 
 /*
