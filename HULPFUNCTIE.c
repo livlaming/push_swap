@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/07 17:00:35 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/07 17:04:12 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/29 13:20:59 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@
     head = NULL;
     while (lst)
     {
-        printf("con: %d\n", lst->content);
+        if (lst->content == EMPTY)
+            printf("con:  EMPTY\n");
+        else
+            printf("con:  %ld\n", lst->content);
         printf("prev: %p\n", lst->prev);
         printf("list: %p\n", lst);
         printf("next: %p\n", lst->next);
@@ -32,7 +35,10 @@
     // printf("next: %d\n", lst->content);
     while (lst)
     {
-        printf("con: %d\n", lst->content);
+        if (lst->content == EMPTY)
+            printf("con:  EMPTY\n");
+        else
+            printf("con:  %ld\n", lst->content);
         printf("prev: %p\n", lst->prev);
         printf("list: %p\n", lst);
         printf("next: %p\n", lst->next);

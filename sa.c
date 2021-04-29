@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   divide_input.c                                     :+:    :+:            */
+/*   sa.c                                               :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/04/07 17:30:20 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/07 17:30:32 by livlamin      ########   odam.nl         */
+/*   Created: 2021/04/29 11:03:13 by livlamin      #+#    #+#                 */
+/*   Updated: 2021/04/29 13:18:37 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_ps_lst	*divide_input(t_ps_lst *lst_a, int argc, char **argv, int number)
+t_ps_lst    *sa(t_ps_lst *lst_a)
 {
-	char	**split;
-
-	split = NULL;
-	if (argc != 2)
-	{
-		while (argc > 1)
-		{
-			number = ft_atoi(*argv);
-			swap_list_push_back(&lst_a, number);
-			argv++;
-			argc--;
-		}
-	}
-	else
-	{
-		split = ft_split(*argv, ' ');
-		while (*split)
-		{
-			number = ft_atoi(*split);
-			swap_list_push_back(&lst_a, number);
-			split++;
-		}
-	}
-	return (lst_a);
+    t_ps_lst    *begin;
+    long        temp;
+    
+    begin = lst_a;
+    temp = EMPTY;
+    if (lst_a->content == EMPTY)
+        return (lst_a);
+    if (lst_a)
+        lst_a = lst_a->next;
+    if (lst_a->content == EMPTY)
+        return (lst_a);
+    lst_a->content = begin->content;
+    temp = lst_a->content;
+    lst_a = lst_a->prev;
+    lst_a->content = temp;
+    return (lst_a);
 }

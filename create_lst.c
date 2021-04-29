@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   checker.c                                          :+:    :+:            */
+/*   create_lst.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/04/01 10:32:40 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/29 11:09:03 by livlamin      ########   odam.nl         */
+/*   Created: 2021/04/07 17:30:20 by livlamin      #+#    #+#                 */
+/*   Updated: 2021/04/29 12:18:59 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+t_ps_lst	*create_lst_a(t_ps_lst *lst_a, int argc, char **argv, long number)
 {
-	t_ps_lst	*lst_a;
-	t_ps_lst	*lst_b;
+	if (argc != 2)
+	{
+		while (argc > 1)
+		{
+			number = ft_atoi(*argv);
+			swap_list_push_back(&lst_a, number);
+			argv++;
+			argc--;
+		}
+	}
+	return (lst_a);
+}
 
-	lst_a = 0;
-	lst_b = 0;
-	if (argc == 1)
-		return (0);
-	(argv)++;
-	lst_a = create_lst_a(lst_a, argc, argv, 0);
-	print_list(lst_a); //
-	return (0);
+t_ps_lst	*create_lst_b(t_ps_lst *lst_b, int argc)
+{
+	if (argc != 2)
+	{
+		while (argc > 1)
+		{
+			swap_list_push_back(&lst_b, EMPTY);
+			argc--;
+		}
+	}
+	return (lst_b);
 }

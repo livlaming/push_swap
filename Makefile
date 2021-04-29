@@ -6,7 +6,7 @@
 #    By: livlamin <livlamin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/04/01 09:51:07 by livlamin      #+#    #+#                  #
-#    Updated: 2021/04/07 17:30:56 by livlamin      ########   odam.nl          #
+#    Updated: 2021/04/29 12:44:57 by livlamin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ LIBFT = libft/libft.a
 SRC_BOTH = get_next_line.c \
 			get_next_line_utils.c \
 			linked_list_push_swap.c \
-			divide_input.c \
+			create_lst.c \
+			sa.c \
 			HULPFUNCTIE.c
 SRC_CHECK = checker.c	
 SRC_SWAP = push_swap.c 
