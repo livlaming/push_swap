@@ -6,12 +6,14 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/29 11:03:13 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/29 13:25:31 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/29 13:59:46 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+
+// "NOOOOO ADRESSEN OMZETTEN GEEN DATA IN ELKAAR KOPIEREN"
 t_ps_lst    *sa(t_ps_lst *lst_a)
 {
     t_ps_lst    *begin;

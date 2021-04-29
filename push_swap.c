@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/29 13:40:11 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/29 14:00:38 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,34 +35,17 @@ int	main(int argc, char **argv)
 	t_ps_lst	*lst_a;
 	t_ps_lst	*lst_b;
 
-	lst_a = 0;
-	lst_b = 0;
+	lst_a = NULL;
+	lst_b = NULL;
 	if (argc == 1)
 		return (0);
 	(argv)++;
 	lst_a = create_lst_a(lst_a, argc, argv, 0);
-	lst_b = create_lst_b(lst_b, argc);
+	// lst_b = create_lst_b(lst_b, argc); // NO!
 
 	prep_print_list(lst_a, NULL);
-	// if (lst_a) //
-	// {
-	// 	printf("lst a\n"); //
-	// 	print_list(lst_a); //
-	// }
-	// if (lst_b) //
-	// {
-	// 	printf("lst b\n"); //
-	// 	print_list(lst_b); //
-	// }
-
 	lst_a = sa(lst_a);
-	printf("after sa\n");
 	prep_print_list(lst_a, NULL);
-	// if (lst_a) //
-	// {
-	// 	printf("lst a\n"); //
-	// 	print_list(lst_a); //
-	// }
 	if (lst_a)
 		lst_a = clear_lst(lst_a);
 	if (lst_b)
