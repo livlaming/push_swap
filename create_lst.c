@@ -12,30 +12,29 @@
 
 #include "push_swap.h"
 
-t_ps_lst	*create_lst_a(t_ps_lst *lst_a, int argc, char **argv, long number)
+t_ps_lst	*create_lst_a(t_ps_lst *lst_a, int argc, char **argv, int number)
 {
+	int i;
+	
+	i = 0;
 	if (argc != 2)
 	{
 		while (argc > 1)
 		{
+			// while (argv[i] != '\0')
+			// {
+			// 	if (argv[i] >= '0' && argv[i] <= '9')
+			// 		return(NULL);
+			// 	i++;
+			// }
 			number = ft_atoi(*argv);
+			printf("num: %d\n", number);
+			// if (ft_isdigit(number) == 0)
+			// 	return (NULL);
 			swap_list_push_back(&lst_a, number);
 			argv++;
 			argc--;
 		}
 	}
 	return (lst_a);
-}
-
-t_ps_lst	*create_lst_b(t_ps_lst *lst_b, int argc)
-{
-	if (argc != 2)
-	{
-		while (argc > 1)
-		{
-			swap_list_push_back(&lst_b, EMPTY);
-			argc--;
-		}
-	}
-	return (lst_b);
 }

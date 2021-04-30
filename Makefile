@@ -6,7 +6,7 @@
 #    By: livlamin <livlamin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/04/01 09:51:07 by livlamin      #+#    #+#                  #
-#    Updated: 2021/04/29 12:44:57 by livlamin      ########   odam.nl          #
+#    Updated: 2021/04/30 14:22:25 by livlamin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC_BOTH = get_next_line.c \
 			get_next_line_utils.c \
 			linked_list_push_swap.c \
 			create_lst.c \
+			error_handler.c \
 			sa.c \
 			HULPFUNCTIE.c
 SRC_CHECK = checker.c	

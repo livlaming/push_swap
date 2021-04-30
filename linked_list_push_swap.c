@@ -6,13 +6,13 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/07 13:36:21 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/29 13:11:59 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/04/30 15:19:31 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_ps_lst	*swap_create_elem(long number, t_ps_lst *prev)
+t_ps_lst	*swap_create_elem(int number, t_ps_lst *prev)
 {
 	t_ps_lst	*list;
 
@@ -26,7 +26,7 @@ t_ps_lst	*swap_create_elem(long number, t_ps_lst *prev)
 	return (list);
 }
 
-void	swap_list_push_back(t_ps_lst **begin_list, long number)
+void	swap_list_push_back(t_ps_lst **begin_list, int number)
 {
 	t_ps_lst	*temp;
 	t_ps_lst	*prev;
