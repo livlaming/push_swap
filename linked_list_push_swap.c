@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/07 13:36:21 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/30 15:19:31 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/03 14:16:19 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,11 @@ void	swap_list_push_back(t_ps_lst **begin_list, int number)
 		temp->next = swap_create_elem(number, prev);
 	}
 	else
+	{
 		*begin_list = swap_create_elem(number, prev);
+		// (*begin_list)->bottom = (*begin_list)->top;
+	}
+		
 }
 
 t_ps_lst *clear_lst(t_ps_lst *ps_lst)
@@ -54,9 +58,10 @@ t_ps_lst *clear_lst(t_ps_lst *ps_lst)
 	while (ps_lst)
 	{
 		temp = ps_lst;
-		ps_lst = ps_lst->next;
+		if (ps_lst->next)
+			ps_lst = ps_lst->next;
 		free(temp);
 	}
-	free(ps_lst);
-	return (NULL);
+	ps_lst = NULL;
+	return (ps_lst);
 }

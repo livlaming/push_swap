@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/30 15:09:31 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/03 14:11:48 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,24 +32,27 @@
 
 int	main(int argc, char **argv)
 {
+	t_ps_stack	*stack;
 	t_ps_lst	*lst_a;
 	t_ps_lst	*lst_b;
 
 	lst_a = NULL;
 	lst_b = NULL ;
+	stack = NULL;
 	if (argc == 1)
 		return (0);
 	(argv)++;
 	lst_a = create_lst_a(lst_a, argc, argv, 0);
+	// stack = create_stack(stack);
 	if (!lst_a)
 		error_handler("wrong input", 0, NULL, NULL);
-	prep_print_list(lst_a, NULL);
+	// prep_print_list(lst_a, NULL);
 	lst_a = sa(lst_a);
 	prep_print_list(lst_a, NULL);
-	if (lst_a)
-		lst_a = clear_lst(lst_a);
-	if (lst_b)
-		lst_b = clear_lst(lst_b);
+	// if (lst_a)
+	// 	lst_a = clear_lst(lst_a);
+	// if (lst_b)
+	// 	lst_b = clear_lst(lst_b);
 	// print_list(lst_a); //
 	// system("leaks push_swap");
 	return (0);

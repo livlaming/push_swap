@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:08:14 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/30 15:19:36 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/03 14:14:33 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,16 @@ typedef struct      s_ps_lst
     struct s_ps_lst	    *prev;
 }					t_ps_lst;
 
+typedef struct      s_ps_stack
+{
+    struct s_ps_stack   *a_bottom;
+    struct s_ps_stack   *a_top;
+    struct s_ps_stack   *a_length;
+    struct s_ps_stack   *b_bottom;
+    struct s_ps_stack   *b_top;
+    struct s_ps_stack   *b_length;
+}					t_ps_stack;
+
 /* WEG!!!
 **
 */
@@ -39,9 +49,10 @@ void            error_handler(char *error_message, int exit_status, t_ps_lst *ls
 /*
 ** push swap linked list
 */
-t_ps_lst        *swap_create_elem(int number, t_ps_lst *prev);
+t_ps_lst	    *swap_create_elem(int number, t_ps_lst *prev);
 void            swap_list_push_back(t_ps_lst **begin_list, int number);
 t_ps_lst        *create_lst_a(t_ps_lst *lst_a, int argc, char **argv, int number);
+// t_ps_stack      *create_stack(t_ps_stack *stack);
 t_ps_lst        *clear_lst(t_ps_lst *ps_lst);
 
 /*
