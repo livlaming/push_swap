@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/03 14:11:48 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/03 14:28:36 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ int	main(int argc, char **argv)
 		return (0);
 	(argv)++;
 	lst_a = create_lst_a(lst_a, argc, argv, 0);
-	// stack = create_stack(stack);
+	stack = create_stack(stack);
 	if (!lst_a)
 		error_handler("wrong input", 0, NULL, NULL);
-	// prep_print_list(lst_a, NULL);
+	prep_print_list(lst_a, NULL, NULL);
 	lst_a = sa(lst_a);
-	prep_print_list(lst_a, NULL);
+	prep_print_list(lst_a, NULL, stack);
 	// if (lst_a)
 	// 	lst_a = clear_lst(lst_a);
 	// if (lst_b)

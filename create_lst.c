@@ -12,22 +12,20 @@
 
 #include "push_swap.h"
 
-// t_ps_stack	*create_stack(t_ps_stack *stack)
-// {
-// 	t_ps_stack	*stack;
-
-// 	stack = malloc(sizeof(t_ps_stack));
-// 	if (stack)
-// 	{
-// 		stack->a_bottom = NULL;
-// 		stack->a_top = NULL;
-// 		stack->a_length = NULL;
-// 		stack->b_bottom = NULL;
-// 		stack->b_top = NULL;
-// 		stack->b_length = NULL;
-// 	}
-// 	return (stack);
-// }
+t_ps_stack	*create_stack(t_ps_stack *stack)
+{
+	stack = malloc(sizeof(t_ps_stack));
+	if (stack)
+	{
+		stack->a_bottom = NULL;
+		stack->a_top = NULL;
+		stack->a_length = 0;
+		stack->b_bottom = NULL;
+		stack->b_top = NULL;
+		stack->b_length = 0;
+	}
+	return (stack);
+}
 
 t_ps_lst	*create_lst_a(t_ps_lst *lst_a, int argc, char **argv, int number)
 {
