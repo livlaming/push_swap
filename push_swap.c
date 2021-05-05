@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/05 12:32:01 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 15:21:53 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,14 @@ int	main(int argc, char **argv)
 	if (!lst_a)
 		error_handler("wrong input", 0, NULL, NULL);
 	set_stack_values_2(lst_a, lst_b, stack);
-	// set_stack_values(lst_a, stack, 'a');
-	prep_print_list(lst_a, NULL, stack);
-	lst_a = swap(lst_a, stack, 'a');  //sa // sb // ss??
-	set_stack_values_2(lst_a, lst_b, stack);
-	push(stack, 'a'); // 
-	prep_print_list(lst_a, NULL, stack);
+	print_stack(stack);
+	if (sa(stack) != 0)
+		error_handler("wrong input", 0, NULL, NULL); // different message
+	print_stack(stack);
 	// if (lst_a)
 	// 	lst_a = clear_lst(lst_a);
 	// if (lst_b)
 	// 	lst_b = clear_lst(lst_b);
-	// print_list(lst_a); //
 	// system("leaks push_swap");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:08:14 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/05 11:50:49 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 15:21:15 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef struct      s_ps_stack
 **
 */
 void            print_list(t_ps_lst *lst); //
-void            prep_print_list(t_ps_lst *lst_a, t_ps_lst *lst_b, t_ps_stack *stack); //
+void			print_stack(t_ps_stack *stack);
 
 /*
 ** error handler
@@ -65,7 +65,8 @@ void			set_stack_values_2(t_ps_lst *lst_a, t_ps_lst *lst_b, t_ps_stack *stack);
 ** push swap 
 */
 
-t_ps_lst        *swap(t_ps_lst *lst, t_ps_stack *stack, char type);
+int				sb(t_ps_stack *stack);
+int				sa(t_ps_stack *stack);
 void			push(t_ps_stack *stack, char type);
 // int     checker(int argc, char **argv);
 // int     push_swap(int argc, char **argv);

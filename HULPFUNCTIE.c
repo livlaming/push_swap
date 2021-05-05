@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/07 17:00:35 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/05 09:27:59 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 15:14:27 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,18 @@
     printf("---------stack------------\n\n");
  }
 
-static void   print_stack(t_ps_stack *stack)
- {
+void   print_stack(t_ps_stack *stack)
+{
+    if (stack->a_top)
+    {
+        printf("---------lst a------------\n\n");
+        print_list(stack->a_top);
+    }
+    if (stack->b_top)
+    {
+        printf("---------lst b------------\n\n");
+        print_list(stack->b_top);
+    }
     if (stack)
     {
         printf("a_top:     %p\n", stack->a_top);
@@ -43,21 +53,4 @@ static void   print_stack(t_ps_stack *stack)
         printf("b_length:  %d\n", stack->b_length);
         printf("\n");
     }
- }
-
-void    prep_print_list(t_ps_lst *lst_a, t_ps_lst *lst_b, t_ps_stack *stack)
-{
-    if (lst_a)
-	{
-		printf("lst a\n");
-		print_list(lst_a);
-	}
-	if (lst_b)
-	{
-		printf("lst b\n");
-		print_list(lst_b);
-	}
-    if (stack)
-        print_stack(stack);
-
 }
