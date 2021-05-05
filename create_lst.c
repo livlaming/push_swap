@@ -27,11 +27,13 @@ t_ps_stack	*create_stack(t_ps_stack *stack)
 	return (stack);
 }
 
-t_ps_lst	*create_lst_a(t_ps_lst *lst_a, int argc, char **argv, int number)
+t_ps_lst	*create_lst(t_ps_lst *lst, int argc, char **argv)
 {
 	int i;
+	int number;
 	
 	i = 0;
+	number = 0;
 	if (argc != 2)
 	{
 		while (argc > 1)
@@ -45,10 +47,10 @@ t_ps_lst	*create_lst_a(t_ps_lst *lst_a, int argc, char **argv, int number)
 			number = ft_atoi(*argv);
 			// if (ft_isdigit(number) == 0)
 			// 	return (NULL);
-			swap_list_push_back(&lst_a, number);
+			swap_list_push_back(&lst, number);
 			argv++;
 			argc--;
 		}
 	}
-	return (lst_a);
+	return (lst);
 }

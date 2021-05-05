@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/07 17:00:35 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/03 14:26:26 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 09:27:59 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,19 @@
         lst = lst->next;
     }
     lst = head;
-    printf("\n\n");
+    printf("---------stack------------\n\n");
  }
 
 static void   print_stack(t_ps_stack *stack)
  {
-     printf("stack\n");
     if (stack)
     {
+        printf("a_top:     %p\n", stack->a_top);
         printf("a_bottom:  %p\n", stack->a_bottom);
-        printf("a_top: %p\n", stack->a_top);
-        printf("a_length: %d\n", stack->a_length);
-        printf("b_bottom: %p\n", stack->b_bottom);
-        printf("b_top: %p\n", stack->b_top);
-        printf("b_length: %d\n", stack->b_length);
+        printf("a_length:  %d\n", stack->a_length);
+        printf("b_top:     %p\n", stack->b_top);
+        printf("b_bottom:  %p\n", stack->b_bottom);
+        printf("b_length:  %d\n", stack->b_length);
         printf("\n");
     }
  }

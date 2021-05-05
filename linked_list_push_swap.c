@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/07 13:36:21 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/03 14:16:19 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 09:36:58 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_ps_lst	*swap_create_elem(int number, t_ps_lst *prev)
 	list = malloc(sizeof(t_ps_lst));
 	if (list)
 	{
+		// list->type = 'x';
 		list->content = number;
 		list->next = NULL;
 		list->prev = prev;

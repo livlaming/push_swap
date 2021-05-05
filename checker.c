@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:32:40 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/04/29 11:09:03 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 09:45:01 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	(argv)++;
-	lst_a = create_lst_a(lst_a, argc, argv, 0);
+	lst_a = create_lst(lst_a, argc, argv);
 	print_list(lst_a); //
 	return (0);
 }
