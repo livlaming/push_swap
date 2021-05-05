@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:08:14 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/05 10:50:44 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 11:50:49 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ t_ps_lst        *clear_lst(t_ps_lst *ps_lst);
 ** push swap linked list
 */
 void			set_stack_values(t_ps_lst *lst, t_ps_stack *stack, char type);
+void			set_stack_values_2(t_ps_lst *lst_a, t_ps_lst *lst_b, t_ps_stack *stack);
 
 /*
 ** push swap 
