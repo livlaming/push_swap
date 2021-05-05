@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:08:14 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/05 15:21:15 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 17:04:08 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void			print_stack(t_ps_stack *stack);
 /*
 ** error handler
 */
-void            error_handler(char *error_message, int exit_status, t_ps_lst *lst_a, t_ps_lst *lst_b);
+void    error_handler(t_ps_stack *stack, int exit_status);
 
 /*
 ** push swap linked list
