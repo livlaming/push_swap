@@ -6,13 +6,18 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/05 09:13:43 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/05 09:14:35 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 10:52:33 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_ps_lst    *push(t_ps_lst *lst, t_ps_stack *stack, char type)
+void    push(t_ps_stack *stack, char type)
 {
-    
+    type = 'a';
+    while (stack->a_top)
+    {
+        printf("content: %d\n", stack->a_top->content);
+        stack->a_top = stack->a_top->next;
+    }
 }

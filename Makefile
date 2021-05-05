@@ -6,7 +6,7 @@
 #    By: livlamin <livlamin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/04/01 09:51:07 by livlamin      #+#    #+#                  #
-#    Updated: 2021/05/05 09:42:26 by livlamin      ########   odam.nl          #
+#    Updated: 2021/05/05 10:51:42 by livlamin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC_BOTH = get_next_line.c \
 			error_handler.c \
 			set_stack_values.c \
 			swap.c \
+			push.c \
 			HULPFUNCTIE.c
 SRC_CHECK = checker.c	
 SRC_SWAP = push_swap.c 

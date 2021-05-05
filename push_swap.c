@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/05 09:45:43 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/05 10:52:03 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int	main(int argc, char **argv)
 	set_stack_values(lst_a, stack, 'a');
 	prep_print_list(lst_a, NULL, stack);
 	lst_a = swap(lst_a, stack, 'a');
+	push(stack, 'a');
 	prep_print_list(lst_a, NULL, stack);
 	// if (lst_a)
 	// 	lst_a = clear_lst(lst_a);
