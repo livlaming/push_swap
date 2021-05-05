@@ -6,7 +6,7 @@
 /*   By: livlamin <livlamin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/01 10:31:24 by livlamin      #+#    #+#                 */
-/*   Updated: 2021/05/03 14:28:36 by livlamin      ########   odam.nl         */
+/*   Updated: 2021/05/04 21:05:41 by livlamin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int argc, char **argv)
 	if (!lst_a)
 		error_handler("wrong input", 0, NULL, NULL);
 	prep_print_list(lst_a, NULL, NULL);
-	lst_a = sa(lst_a);
+	lst_a = swap(lst_a, stack, 'a');
 	prep_print_list(lst_a, NULL, stack);
 	// if (lst_a)
 	// 	lst_a = clear_lst(lst_a);
